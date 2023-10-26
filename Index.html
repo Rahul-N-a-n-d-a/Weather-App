@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Style.css">
     <title>Weather App</title>
 </head>
+
 <body>
     <div class="container">
         <div class="search">
-            <input type="text" placeholder="Enter city name" spellcheck="false">
-            <button><img src="./images/search.png" alt="search-icon"></button>
+            <input type="text" placeholder="Enter city name" class="js-cityName" spellcheck="false">
+            <button class="js-search-btn"><img src="./images/search.png" alt="search-icon"></button>
         </div>
         <div class="weather">
             <img src="./images/clouds.png" alt="weather-image" class="weather-img">
-            <h1 class="temp">23°c</h1>
-            <h2 class="city-name">Banglore</h2>
+            <h1 class="temp"></h1>
+            <h2 class="climate-condition"></h2>
             <div class="details">
                 <div class="col">
                     <img src="./images/humidity.png">
                     <div>
-                        <p class="humidity">55%</p>
+                        <p class="humidity"></p>
                         <p>Humidity</p>
                     </div>
                 </div>
                 <div class="col">
                     <img src="./images/wind.png">
                     <div>
-                        <p class="wind">15 km/h</p>
+                        <p class="wind"></p>
                         <p>Wind Speed</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./Script.js"></script>
 </body>
+
 </html>
