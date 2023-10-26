@@ -6,7 +6,12 @@ let weatherImage = document.querySelector(".weather-img");
 document.querySelector(".js-search-btn").addEventListener('click', () => {
     const city = document.querySelector('.js-cityName').value;
     fetch(url + `&appid=${apikey}&q=${city}`).then(
-        response => { return response.json() }).then(
+        response => { 
+            if (response.status == 404) {
+                document.querySelector('.error').style.display = "block";
+                document.querySelector('.weather').style.display = "none";
+            }
+            return response.json() }).then(
             data => { console.log(data); 
                 document.querySelector('.climate-condition').innerHTML = data.weather[0].main;
                 document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + "°C";
@@ -30,7 +35,6 @@ document.querySelector(".js-search-btn").addEventListener('click', () => {
                 }
 
                 document.querySelector('.weather').style.display = "block";
+                document.querySelector('.error').style.display = "none";
             })
-
-    
 })
