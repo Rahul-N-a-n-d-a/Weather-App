@@ -88,3 +88,7 @@ body {
 .humidity, .wind {
     font-size: 20px;
 }
+
+.weather {
+    display: none;
+}

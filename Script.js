@@ -29,6 +29,7 @@ document.querySelector(".js-search-btn").addEventListener('click', () => {
                     weatherImage = "./images/Clouds.png"
                 }
 
+                document.querySelector('.weather').style.display = "block";
             })
 
     
