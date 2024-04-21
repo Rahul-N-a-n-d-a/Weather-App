@@ -14,7 +14,6 @@ document.querySelector(".js-search-btn").addEventListener('click', () => {
             return response.json()
         }).then(
             data => {
-                console.log(data);
                 document.querySelector('.climate-condition').innerHTML = data.weather[0].main;
                 document.querySelector('.temp').innerHTML = Math.round(data.main.temp) + "°C";
                 document.querySelector('.humidity').innerHTML = data.main.humidity + "%";
